@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                   sh 'echo "this is a test phase"'
-                  sh '/usr/bin/nod --version'
+                  sh '/usr/bin/node --version'
             }
         }
     }
