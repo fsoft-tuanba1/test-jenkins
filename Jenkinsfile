@@ -5,6 +5,9 @@ pipeline {
             steps {
                 sh 'echo "this is a test phase"'
             }
+            steps {
+               sh 'node --version'
+            }
         }
     }
 }
