@@ -1,11 +1,18 @@
 pipeline {
-    agent { any { image 'node:14-alpine' } }
+    agent any
     stages {
-        stage('build') {
+        stage('Example') {
             steps {
-                  sh 'echo "this is a test phase"'
-                  sh '/usr/bin/node --version'
+                echo 'Hello World'
+
+                script {
+                    def browsers = ['chrome', 'firefox']
+                    for (int i = 0; i < browsers.size(); ++i) {
+                        echo "Testing the ${browsers[i]} browser"
+                    }
+                }
             }
         }
     }
 }
+
