@@ -11,7 +11,7 @@ pipeline {
                 echo 'Hello World. This is wonderful world'
 
                 script {
-                    def browsers = ['chrome', 'firefox']
+                    def browsers = ['chrome', 'firefox', 'safari']
                     for (int i = 0; i < browsers.size(); ++i) {
                         echo "Testing the ${browsers[i]} browser"
                     }
